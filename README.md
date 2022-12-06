@@ -17,7 +17,7 @@ Python agent which queries Runpod API periodically, selects preconfigured fields
 ### Build and startup
 
 ```
-git clone https://gitlab.com/infrastructure131/runpod-api-influx.git
+git clone
 cd runpod-api-influx
 
 docker build -t  runpod-api-influx .
@@ -27,14 +27,14 @@ docker run -ti \
     -e LOG_LEVEL=INFO \
     -e SLEEP_TIME=60 \
     -e INFLUX_FORMAT=name-values \
-    -e INFLUX_HOST=http://192.168.0.111:8086 \
+    -e INFLUX_HOST=http://1xxxxx1:8086 \
     -e INFLUX_MACHINE_BUCKET=metrics \
     -e INFLUX_MACHINE_MEASUREMENT=runpodapimetrics \
     -e INFLUX_EARNINGS_BUCKET=machineEarnings \
     -e INFLUX_EARNINGS_MEASUREMENT=earnings \
-    -e INFLUX_TOKEN="dwbjnB42nak6icsh61b3j2e2PsN_6yTSE55a1gD7ZjjImuJOmp03B3B7xxcTQeIKuI43w6TV_4v33C0AEDE1Cw==" \
+    -e INFLUX_TOKEN="xxxxxxxxxxxxxxxxxxxxx==" \
     -e INFLUX_ORG_ID="f2cba366681f0213" \
-    -e RUNPOD_API_KEY=VH5W2VAXM2IQSCW1IF68WNPD9AZV8MTP7AGOQESU \
+    -e RUNPOD_API_KEY=xxxxxxxxxxxxx \
     --restart=unless-stopped \
     --name=runpod-api-influx \
     runpod-api-influx
@@ -94,9 +94,9 @@ docker kill runpod-api-influx
 docker rm runpod-api-influx 
 docker run -d -e LOG_LEVEL=INFO -e SLEEP_TIME=60 \
 -e INFLUX_FORMAT=name-values \
--e INFLUX_HOST=http://10.10.110.250:8086 \
--e INFLUX_TOKEN="VLHre-b2rDPb4hWfGCjHhHQnT0WUDbtEcYrKBmJte0n7_QDq0jeZjuvVRp8rAaIm_hc4g13aTUHe1cV4p0b7_w==" \
--e INFLUX_ORG_ID="0218242e44bd32c3" \
+-e INFLUX_HOST=http://1xxxxxxxxx:8086 \
+-e INFLUX_TOKEN="VLHre-xxxxxxxxxxxxxxxxxxxx==" \
+-e INFLUX_ORG_ID="xxxxxxxxxx" \
 -e INFLUX_MACHINE_BUCKET=runpod \
 -e INFLUX_EARNINGS_BUCKET=runpod \
 --name=runpod-api-influx \
