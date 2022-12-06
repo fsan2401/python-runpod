@@ -1,0 +1,5 @@
+curl https://api.runpod.io/graphql?api_key=VH5W2VAXM2IQSCW1IF68WNPD9AZV8MTP7AGOQESU -d '{"query":"query getMyMachines {\n  myself {\n    machines {\n      name\n      machineBalance {\n        hostDiskEarnings\n        hostTotalEarnings\n        hostGpuEarnings\n      }\n    }\n  }\n}"}' -H "Content-Type: application/json"
+
+
+
+curl https://api.runpod.io/graphql?api_key=VH5W2VAXM2IQSCW1IF68WNPD9AZV8MTP7AGOQESU -d '{"query":"query {\n  myself {\n    id\n    machineEarnings {\n      date\n      machineId\n      hostGpuEarnings\n      hostDiskEarnings\n      hostTotalEarnings\n    }\n  }\n}"}' -H "Content-Type: application/json"
